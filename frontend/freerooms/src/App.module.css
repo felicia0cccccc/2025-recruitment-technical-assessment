@@ -1,0 +1,15 @@
+.mainContainer{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 65px;
+  width: 100%;
+}
+
+.submainContainer{
+  width: 100%;
+  margin: 0 25px;
+}
+
+.cardContainer{
+  display: grid;
+}

@@ -1,0 +1,108 @@
+:root {
+    --primary-color: hsl(27, 100%, 47%);
+    --primary-color-transparent: hsla(27, 100%, 47%, 0.5);
+    --background-color: hsl(0, 0%, 100%);
+    --hr-color: hsl(0, 1%, 87%);
+
+    --space-xxs: 0.0625rem; /* 1px */
+    --space-xs: 0.25rem; /* 4px */
+    --space-sm: 0.5rem; /* 8px */
+    --space-md: 1rem; /* 16px */
+
+    --border-size: 0.0625rem;
+    --border-radius: 0.25rem;
+
+    --button-size: 2.625rem;
+    --logo-size: 3.125rem;
+    --font-size: 1.875rem;
+    --header-size: 4.063rem;
+}
+
+.headerTopBar{
+    display: flex;
+    height: var(--header-size);
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--space-xs);
+    padding-right: var(--space-md);
+    padding-left: var(--space-md);
+    padding-bottom: var(--space-sm);
+
+    background-color: var(--background-color);
+
+    position: fixed;
+    z-index: 100;
+}
+
+.headerLogoContainer{
+    display: flex;
+    width: auto;
+    align-items: center;
+    gap: var(--space-xxs);
+}
+
+.headerLogo{
+    height: var(--logo-size);
+    width: auto;
+}
+
+.headerTitle{                
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--space-sm);
+    margin-bottom: 0px;
+
+    letter-spacing: var(--space-xxs);
+    font-size: var(--font-size);
+    color: var(--primary-color); 
+}
+
+.headerSquareButtons{
+    display: flex;
+    width: var(--button-size);
+    height: var(--button-size);
+    justify-content: center;
+    align-items: center;
+
+    border-radius: var(--border-radius);
+    border: var(--border-size) solid var(--primary-color-transparent);
+    background-color: var(--background-color);
+}
+
+.headerSquareButtonsOnClick{
+    display: flex; 
+    width: var(--button-size);
+    height: var(--button-size);
+    justify-content: center;
+    align-items: center;
+
+    border-radius: var(--border-radius);
+    border: var(--border-size) solid var(--primary-color-transparent);
+    background-color: var(--primary-color);
+}
+
+.headerNavBar{
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    padding-top: var(--space-sm);
+    gap: var(--space-sm);
+}
+
+.headerLine{
+    height: var(--space-xxs);
+    width: 100%;
+    top: var(--header-size);
+
+    background-color: var(--hr-color);
+    border: none;
+    position: fixed;
+    z-index: 100;
+}
+
+@media (max-width: 600px) {
+    .headerTitle {
+        display: none;
+    }
+}

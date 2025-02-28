@@ -1,0 +1,133 @@
+:root{
+    --primary-color: hsl(27, 100%, 47%);
+    --background-color: white;
+    --secondary-color: hsl(0, 1%, 87%);
+
+    --font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    --font-size-rooms-available: 0.75rem;
+    --font-size-building-name: 1rem;
+
+    --border-radius-card: 0.5rem;
+    --border-radius-building-name: 0.5rem;
+    --border-radius-rooms-available: 1rem;
+}
+
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card{
+    height: 385px;
+
+    font-family: var(--font-family);
+    letter-spacing: 0.00938em;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: var(--border-radius-card);
+
+    position: relative;
+
+    flex: 0 0 calc(20% - 16px);
+}
+
+.cardRoomsAvailable{
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+    margin: 12px;
+    right: 0;
+    position: absolute;
+
+    font-size: var(--font-size-rooms-available);
+    font-weight: bold;
+
+    background-color: var(--background-color);
+    border-radius: var(--border-radius-rooms-available);
+}
+
+.cardBuildingName{
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 12px;
+    padding: 15px 20px;
+
+    font-size: var(--font-size-building-name);
+    font-weight: 500;
+    color: var(--background-color);
+
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius-building-name);
+
+    position: absolute;
+}
+
+@media (max-width: 1630px) {
+    .card{
+        flex: 0 0 calc(25% - 15px);
+    }
+}
+
+@media (max-width: 1310px) {
+    .card{
+        flex: 0 0 calc((100% / 3) - 14px);
+    }
+}
+
+@media (max-width: 1200px) {
+    .card{
+        height: 300px;
+    }
+}
+
+@media (max-width: 990px) {
+    .card{
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 900px) {
+    .card{
+        height: 200px;
+    }
+}
+
+@media (max-width: 670px) {
+    .card{
+        flex: 0 0 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .card{
+        display: flex;
+        height: 100px;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .card::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: hsla(0, 0%, 0%, 0.3); /* Dark overlay */
+        border-radius: var(--border-radius-card);
+    }
+
+    .cardBuildingName{
+        top: auto;
+        bottom: auto;
+        position: relative;
+        width: 65%;
+        padding: 0;
+        background-color: transparent;
+    }
+}

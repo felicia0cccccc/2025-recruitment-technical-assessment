@@ -1,0 +1,94 @@
+:root {
+    --primary-color: hsl(27, 100%, 47%);
+    --background-color: white;
+    --secondary-color: hsl(0, 0%, 47%);
+
+    --border-radius-search-bar: 0.25rem;
+    --border-radius-filters: 0.625rem;
+
+    --font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    --font-size-placeholder: 1rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.dropdownLogo {
+    display: flex;
+    width: auto;
+    align-items: center;
+    gap: 16px;
+}
+
+.dropdown {
+    display: flex;
+    width: 140px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius-filters);
+    background-color: var(--background-color);
+    position: relative;
+}
+
+.dropdownContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.searchIcon {
+    display: flex;
+    margin-right: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchInput {
+    width: 100%;
+    height: 40px;
+
+    font-family: var(--font-family);
+    font-size: var(--font-size-placeholder);
+
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+}
+
+.searchBar {
+    display: flex;
+    padding-left: 16px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 65%;
+    
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    position: absolute;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        align-items: stretch;
+    }
+    
+    .searchBar {
+        position: static;
+        width: 100%;
+        margin-bottom: 12px;
+        max-width: 100%;
+    }
+    
+}
