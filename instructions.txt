@@ -1,0 +1,1 @@
+To start the server, 'npm install' in freerooms folder (2025-recruitment-technical-assessment/front-endf/freerooms). Then, 'npm run dev'
